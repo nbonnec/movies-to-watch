@@ -46,7 +46,7 @@ def get_movie_endpoints() -> list:
     :return: a list of urls
     """
     list_of_movies = []
-    for i in range(1, get_page_count()):
+    for i in range(1, get_page_count() + 1):
         page = requests.get(TO_SEE_PAGE.format(i))
         soup = BeautifulSoup(page.text, 'html.parser')
         list_of_movies.extend(map(lambda x: x['href'], soup.find_all('a', 'elco-anchor')))
