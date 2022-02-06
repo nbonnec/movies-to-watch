@@ -1,0 +1,3273 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie9" lang="fr"><![endif]-->
+<!--[if !IE]><!--><html lang="fr"><!--<![endif]-->
+<head>
+  <title>Envies de Nico Bobo (@NicoBobo) - SensCritique</title>
+
+  <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"a2ca6cf22e",applicationID:"44844768"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="La collection culturelle de Nico Bobo. Classement par notes, recommandations, envies. Ses critiques, listes et ses appréciations." />
+
+  <script type="application/javascript">
+            var cgCategory = "autre";
+            var cgSubscriber = true;
+            </script>
+  <script type="application/javascript" src="https://do69ll745l27z.cloudfront.net/scripts/master/senscritique.js" async>
+  </script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-T75FWN');</script>
+
+  <link rel="publisher" href="https://plus.google.com/+senscritique">
+
+  <link rel="canonical" href="https://www.senscritique.com/NicoBobo/collection/wish/all/all/all/all/all/all/all/all/page-1" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
+
+  <meta name="apple-itunes-app" content="app-id=1189602068">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://static.senscritique.com/lib/optimized_ln/layouts/default.html.min.css?datetime=20220204165523"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://static.senscritique.com/lib/optimized_ln/collections/index.html.min.css?datetime=20220204165523"/>
+
+  <!--[if lt IE 9]>
+  <script>
+				document.createElement('header');
+				document.createElement('section');
+				document.createElement('article');
+				document.createElement('aside');
+				document.createElement('nav');
+				document.createElement('footer');
+				document.createElement('figure');
+				document.createElement('figcaption');
+				document.createElement('hgroup');
+				document.createElement('time');
+				document.createElement('canvas');
+			</script>
+  <![endif]-->
+  <link rel="apple-touch-icon" href="/img/favicon/57.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/114.png">
+</head>
+<body
+        class=" dark-theme"
+        data-sc-refresh-api-facebook="true" 		data-sc-registered="1"
+        data-sc-page-type-id="*"
+        data-sc-page-section-id="5"
+        data-sc-page-view-id="21"
+
+        data-sc-user-id="1393261"
+>
+<script>dataLayer = window.dataLayer || []</script>
+
+<script type="text/javascript">
+var hachette_properties = {};
+
+// global
+hachette_properties['lang'] = "fr";
+hachette_properties['page_type'] = "profil";
+hachette_properties['page_category'] = "collection";
+hachette_properties['page_subcategory'] = null;
+var hachette_universe = 0;
+
+// user
+    var hachette_userData = {"user_account_id":"1393261","user_civility":"male","user_zipcode":null,"user_followers_volume":0}
+
+    for (key in hachette_userData) {
+        if(hachette_userData.hasOwnProperty(key)){
+            hachette_properties[key] = hachette_userData[key];
+        }
+    }
+
+
+if (window && window.location && window.location.href) {
+    var url = window.location.href;
+
+    if (url === 'https://www.senscritique.com' || url === 'https://www.senscritique.com/') {
+        hachette_properties['page_type'] = 'home';
+        hachette_properties['page_category'] = 'home';
+    }
+
+    if (url === 'https://www.senscritique.com/films') {
+        hachette_properties['page_type'] = 'liste film';
+        hachette_properties['page_category'] = 'films';
+    }
+
+    if (url === 'https://www.senscritique.com/series') {
+        hachette_properties['page_type'] = 'liste serie tv';
+        hachette_properties['page_category'] = 'serie tv';
+    }
+
+    if (url === 'https://www.senscritique.com/jeuxvideo') {
+        hachette_properties['page_type'] = 'liste jeu video';
+        hachette_properties['page_category'] = 'jeu video';
+    }
+
+    if (url === 'https://www.senscritique.com/livres') {
+        hachette_properties['page_type'] = 'liste livre';
+        hachette_properties['page_category'] = 'livres';
+    }
+
+    if (url === 'https://www.senscritique.com/bd') {
+        hachette_properties['page_type'] = 'liste bd';
+        hachette_properties['page_category'] = 'bd';
+    }
+
+    if (url === 'https://www.senscritique.com/musique') {
+        hachette_properties['page_type'] = 'liste musique';
+        hachette_properties['page_category'] = 'musique';
+    }
+
+    if (url === 'https://www.senscritique.com/films/toujours-a-l-affiche') {
+        hachette_properties['page_type'] = 'liste film';
+        hachette_properties['page_category'] = 'actualite';
+    }
+
+    if (url === 'https://www.senscritique.com/series/actualite') {
+        hachette_properties['page_type'] = 'liste serie tv';
+        hachette_properties['page_category'] = 'actualite';
+    }
+
+    if (url === 'https://www.senscritique.com/jeuxvideo/actualite') {
+        hachette_properties['page_type'] = 'liste jeu video';
+        hachette_properties['page_category'] = 'actualite';
+    }
+
+    if (url === 'https://www.senscritique.com/livres/actualite') {
+        hachette_properties['page_type'] = 'liste livre';
+        hachette_properties['page_category'] = 'actualite';
+    }
+
+    if (url === 'https://www.senscritique.com/livres/meilleures-ventes') {
+        hachette_properties['page_type'] = 'liste livre';
+        hachette_properties['page_category'] = 'meilleures ventes';
+    }
+
+    if (url === 'https://www.senscritique.com/bd/actualite') {
+        hachette_properties['page_type'] = 'liste bd';
+        hachette_properties['page_category'] = 'actualite';
+    }
+
+    if (url === 'https://www.senscritique.com/bd/actualite/comics') {
+        hachette_properties['page_type'] = 'liste bd';
+        hachette_properties['page_category'] = 'actualite';
+    }
+
+    if (url === 'https://www.senscritique.com/bd/actualite/manga') {
+        hachette_properties['page_type'] = 'liste bd';
+        hachette_properties['page_category'] = 'actualite';
+    }
+
+    if (url === 'https://www.senscritique.com/musique/actualite') {
+        hachette_properties['page_type'] = 'liste musique';
+        hachette_properties['page_category'] = 'actualite';
+    }
+
+    if (url === 'https://www.senscritique.com/cgu') {
+        hachette_properties['page_type'] = 'basic page';
+        hachette_properties['page_category'] = 'cgu';
+    }
+
+    if (url === 'https://www.senscritique.com/register') {
+        hachette_properties['page_type'] = 'compte membre';
+        hachette_properties['page_category'] = 'inscription';
+    }
+
+    if (/^https:\/\/www.senscritique.com\/apropos/.test(url)) {
+        hachette_properties['page_type'] = 'professionnel';
+        hachette_properties['page_category'] = 'professionnel';
+    }
+
+    if (/\/films\/toujours-a-l-affiche/.test(url)) {
+        hachette_properties['page_type'] = 'liste film';
+    }
+
+    if (/\/films\/sorties-cinema/.test(url)) {
+        hachette_properties['page_type'] = 'liste film';
+    }
+
+    if (/\/films\/cette-semaine/.test(url)) {
+        hachette_properties['page_type'] = 'liste film';
+    }
+
+    if (/\/jeuxvideo\/sorties-jeuxvideo/.test(url)) {
+        hachette_properties['page_type'] = 'liste jeu video';
+    }
+
+    if (/\/series\/prochaines-sorties/.test(url)) {
+        hachette_properties['page_type'] = 'liste serie tv';
+    }
+
+    if (hachette_properties['page_type'] === 'edito') {
+        if (hachette_universe === 1) {
+            hachette_properties['page_type'] = 'film';
+        }
+        if (hachette_universe === 2) {
+            hachette_properties['page_type'] = 'livre';
+        }
+        if (hachette_universe === 3) {
+            hachette_properties['page_type'] = 'jeu video';
+        }
+        if (hachette_universe === 4) {
+            hachette_properties['page_type'] = 'serie tv';
+        }
+        if (hachette_universe === 5) {
+            hachette_properties['page_type'] = 'bd';
+        }
+        if (hachette_universe === 6) {
+            hachette_properties['page_type'] = 'musique';
+        }
+    }
+
+    if (hachette_properties['page_category'] === 'top 100o ftop 10') {
+        hachette_properties['page_category'] = 'top'
+    }
+
+    if (hachette_properties['page_type'] === 'poll' || hachette_properties['page_type'] == 'list') {
+        // Order is important.
+        if (/\/liste\//.test(url)) {
+            hachette_properties['page_category'] = "liste utilisateur"
+
+                    }
+
+        if (/\/tops/.test(url)) {
+            hachette_properties['page_category'] = "top"
+        }
+
+        if (/\/top/.test(url)) {
+            hachette_properties['page_category'] = "reponse sondage"
+        }
+
+        if (/\/top\/resultats/.test(url)) {
+            hachette_properties['page_category'] = "sondage"
+        }
+
+        if (hachette_universe === 1) {
+            hachette_properties['page_type'] = 'liste film'
+        }
+        if (hachette_universe === 2) {
+            hachette_properties['page_type'] = 'liste livre'
+        }
+        if (hachette_universe === 3) {
+            hachette_properties['page_type'] = 'liste jeu video'
+        }
+        if (hachette_universe === 4) {
+            hachette_properties['page_type'] = 'liste serie tv'
+        }
+        if (hachette_universe === 5) {
+            hachette_properties['page_type'] = 'liste bd'
+        }
+        if (hachette_universe === 6) {
+            hachette_properties['page_type'] = 'liste musique'
+        }
+    }
+
+    if (hachette_properties['page_type'] === 'compte membre') {
+        hachette_properties['page_type'] = 'compte utilisateur';
+    }
+}
+
+window.dataLayer && window.dataLayer.push({hachette_properties: hachette_properties})
+
+</script>								<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-T7KMCR');</script>
+<!-- End Google Tag Manager -->	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7KMCR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+<button class="d-design-feedback action-popup-support">
+  <div class="d-design-feedback-contact">
+    Contacter le support
+  </div>
+  <img
+          alt="Icône de contacter le support"
+          class="icon-feedback-contact"
+          src="https://static.senscritique.com/img/support/contact@2x.png"
+          srcset="
+						https://static.senscritique.com/img/support/contact.png 1x,
+						https://static.senscritique.com/img/support/contact@2x.png 2x"
+  />
+  <img
+          alt="Icône remplie de contacter le support"
+          class="icon-feedback-contact-filled"
+          src="https://static.senscritique.com/img/support/filled@2x.png"
+          srcset="
+						https://static.senscritique.com/img/support/filled.png 1x,
+						https://static.senscritique.com/img/support/filled@2x.png 2x"
+  />
+</button>
+<iframe id="iframe-popup-support" data-src="https://www.senscritique.com"></iframe>
+
+
+<div
+        class="wrap"
+
+        data-rel="website-wrapper"
+>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="header-placeholder"></div>
+  <header class="header isConnected desktop" data-rel="header">
+    <div class="header-content-wrapper">
+      <a href="/">
+        <span class="header-logo-big eins-logo-big  " alt="logo"></span>
+        <span class="header-logo-medium eins-logo-medium  " alt="logo-medium"></span>
+        <span class="header-logo-small eins-logo-small  " alt="logo"></span>
+      </a>
+      <div class="header-line">
+        <div class="header-line-top">
+          <div class="header-input">
+            <div id="header-autocomplete">
+            </div>
+            <a href="/search" class="header-explorer">Explorer</a>
+          </div>
+          <div class="header-user">
+            <!--
+                                    --><a href="/notifications" class="header-user-notifications" data-rel="sc-headerNotifications-link">
+            <span class="eins-sprite eins-notification-header  " ></span>
+          </a>
+            <!--
+                                    --><div class="header-user-separator"></div>
+            <div class="header-user-infos" data-rel="header-user-infos">
+              <div class="header-user-message-notification"></div>
+              <a href="/NicoBobo" class="header-user-infos-link">
+                <img  class="header-user-image" data-rel="sc-avatar" src="https://media.senscritique.com/missing/203/30x30/missing.jpg" alt="Avatar Nico Bobo" title="Avatar Nico Bobo">
+                <span class="header-user-name">Nico Bobo</span>
+                <span class="header-user-infos-chevron eins-chevron-dropdown  " alt="chevron"></span>
+              </a>
+              <div class="header-user-infos-options">
+                <div class="shadow-triangle shadow-triangle-user"></div>
+                <ul>
+                  <li class="header-user-infos-options-item">
+                    <a href="/messagerie" class="header-user-infos-options-link">
+                      Messages
+                    </a>
+                  </li>
+                  <li class="header-user-infos-options-item">
+                    <a href="/NicoBobo/collection/rating" class="header-user-infos-options-link">
+                      Notes
+                    </a>
+                  </li>
+                  <li class="header-user-infos-options-item">
+                    <a href="/NicoBobo/collection/wish" class="header-user-infos-options-link">
+                      Envies
+                    </a>
+                  </li>
+                  <li class="header-user-infos-options-item">
+                    <a href="/NicoBobo/critiques" class="header-user-infos-options-link">
+                      Critiques
+                    </a>
+                  </li>
+                  <li class="header-user-infos-options-item">
+                    <a href="/NicoBobo/listes/likes" class="header-user-infos-options-link">
+                      Listes
+                    </a>
+                  </li>
+                  <li class="header-user-infos-options-item">
+                    <a href="/agenda" class="header-user-infos-options-link">
+                      Agenda
+                    </a>
+                  </li>
+                  <li class="header-user-infos-options-item">
+                    <a href="/NicoBobo/journal" class="header-user-infos-options-link">
+                      Journal
+                    </a>
+                  </li>
+                  <li class="header-user-infos-options-item">
+                    <a href="/NicoBobo/collection/current/series" class="header-user-infos-options-link">
+                      Séries en cours
+                    </a>
+                  </li>
+                  <li class="header-user-infos-options-item">
+                    <a href="/recommander" class="header-user-infos-options-link">
+                      Inviter mes amis
+                    </a>
+                  </li>
+                  <li class="header-user-infos-options-item">
+                    <a href="/suggestions-eclaireurs" class="header-user-infos-options-link">
+                      Trouver des éclaireurs
+                    </a>
+                  </li>
+                  <li class="header-user-infos-options-item">
+                    <a href="/parametres" class="header-user-infos-options-link">
+                      Paramètres
+                    </a>
+                  </li>
+                  <li class="header-user-infos-options-item">
+                    <a data-rel="menu-logout" href="/logout" class="header-user-infos-options-link">
+                      Déconnexion
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div><!--
+                                                --><div class="header-user-ratings">
+            <a href="/enrichir" title="Complétez votre collection" class="header-user-ratings-link">
+              <div class="header-user-ratings-desktop">
+                <div class="header-user-ratings-number">
+                  <div class="header-user-ratings-number-icon eins-star-outline  " alt="star"></div>
+                  Notez
+                </div>
+                <div class="header-user-ratings-number-hover">
+                  <div class="eins-sprite eins-star-full  " alt="logo"></div>
+                </div>
+              </div>
+              <div class="header-user-ratings-mobile">
+                <div class="header-user-ratings-number-mini">
+                  <div class="eins-sprite eins-star-outline  " alt="star"></div>
+                </div>
+                <div class="header-user-ratings-number-mini-hover">
+                  <div class="eins-sprite eins-star-full  " alt="logo"></div>
+                </div>
+              </div>
+            </a>
+          </div>
+          </div>
+          <div class="header-search-button header-search-button-mobile">
+            <span class="eins-sprite eins-search-header  " ></span>
+          </div>
+        </div>
+        <div class="header-line-bottom">
+          <nav class="header-navigation">
+            <div class="header-navigation-main-wrapper no-universe">
+              <div class="header-navigation-main-list no-universe">
+                <ul class="header-navigation-main no-universe">
+                  <li class="header-navigation-main-item">
+                    <a href="/films">
+                      Films
+                    </a>
+                  </li>
+                  <li class="header-navigation-main-item">
+                    <a href="/series">
+                      Séries
+                    </a>
+                  </li>
+                  <li class="header-navigation-main-item">
+                    <a href="/jeuxvideo">
+                      Jeux
+                    </a>
+                  </li>
+                  <li class="header-navigation-main-item">
+                    <a href="/livres">
+                      Livres
+                    </a>
+                  </li>
+                  <li class="header-navigation-main-item">
+                    <a href="/bd">
+                      BD
+                    </a>
+                  </li>
+                  <li class="header-navigation-main-item">
+                    <a href="/musique">
+                      Musique
+                    </a>
+                  </li>
+                  <li class="header-navigation-main-item header-navigation-main-item--warner">
+                    <a href="/univers/warner">
+                      <img
+                              alt="Logo de la Warner noir"
+                              src="https://static.senscritique.com/img/warner/warner-mino-logo-black.png"
+                              srcset="https://static.senscritique.com/img/warner/warner-mino-logo-black.png 1x,
+                                                        https://static.senscritique.com/img/warner/warner-mino-logo-black@2x.png 2x,
+                                                        https://static.senscritique.com/img/warner/warner-mino-logo-black@3x.png 3x"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="header-search-button header-search-button-big">
+            <span class="eins-sprite eins-search-header  " ></span>
+          </div>
+          <div class="header-user sticky">
+
+            <a href="/notifications" class="header-user-notifications" data-rel="sc-headerNotifications-link">
+              <span class="eins-sprite eins-notification-header  " ></span>
+            </a><!--
+                    --><div class="header-user-infos" data-rel="header-user-infos">
+            <div class="header-user-message-notification"></div>
+            <a href="/NicoBobo" class="header-user-infos-link">
+              <img  class="header-user-image" data-rel="sc-avatar" src="https://media.senscritique.com/missing/203/30x30/missing.jpg" alt="Avatar Nico Bobo" title="Avatar Nico Bobo">
+              <span class="header-user-name">Nico Bobo</span>
+              <span class="header-user-infos-chevron eins-chevron-dropdown  " alt="chevron"></span>
+            </a>
+            <div class="header-user-infos-options">
+              <div class="shadow-triangle shadow-triangle-user"></div>
+              <ul>
+                <li class="header-user-infos-options-item">
+                  <a href="/messagerie" class="header-user-infos-options-link">
+                    Messages
+                  </a>
+                </li>
+                <li class="header-user-infos-options-item">
+                  <a href="/NicoBobo/collection/rating" class="header-user-infos-options-link">
+                    Notes
+                  </a>
+                </li>
+                <li class="header-user-infos-options-item">
+                  <a href="/NicoBobo/collection/wish" class="header-user-infos-options-link">
+                    Envies
+                  </a>
+                </li>
+                <li class="header-user-infos-options-item">
+                  <a href="/NicoBobo/critiques" class="header-user-infos-options-link">
+                    Critiques
+                  </a>
+                </li>
+                <li class="header-user-infos-options-item">
+                  <a href="/NicoBobo/listes/likes" class="header-user-infos-options-link">
+                    Listes
+                  </a>
+                </li>
+                <li class="header-user-infos-options-item">
+                  <a href="/agenda" class="header-user-infos-options-link">
+                    Agenda
+                  </a>
+                </li>
+                <li class="header-user-infos-options-item">
+                  <a href="/NicoBobo/journal" class="header-user-infos-options-link">
+                    Journal
+                  </a>
+                </li>
+                <li class="header-user-infos-options-item">
+                  <a href="/NicoBobo/collection/current/series" class="header-user-infos-options-link">
+                    Séries en cours
+                  </a>
+                </li>
+                <li class="header-user-infos-options-item">
+                  <a href="/recommander" class="header-user-infos-options-link">
+                    Inviter mes amis
+                  </a>
+                </li>
+                <li class="header-user-infos-options-item">
+                  <a href="/suggestions-eclaireurs" class="header-user-infos-options-link">
+                    Trouver des éclaireurs
+                  </a>
+                </li>
+                <li class="header-user-infos-options-item">
+                  <a href="/parametres" class="header-user-infos-options-link">
+                    Paramètres
+                  </a>
+                </li>
+                <li class="header-user-infos-options-item">
+                  <a data-rel="menu-logout" href="/logout" class="header-user-infos-options-link">
+                    Déconnexion
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div><!--
+                    --><div class="header-user-ratings">
+            <a href="/enrichir" title="Complétez votre collection" class="header-user-ratings-link">
+              <div class="header-user-ratings-sticky">
+                <div class="header-user-ratings-number-mini">
+                  <div class="eins-sprite eins-star-outline  " alt="star"></div>
+                </div>
+                <div class="header-user-ratings-number-mini-hover">
+                  <div class="eins-sprite eins-star-full  " alt="logo"></div>
+                </div>
+              </div>
+            </a>
+          </div>
+          </div>
+          <div class="header-social">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap__content">
+
+    <div class="d-grid lahe-breadcrumb"><ul class="lahe-breadcrumb-content "><li ><a href="/" class="lahe-breadcrumb-anchor">SensCritique</a><span class="d-chevron1-r lahe-breadcrumb-divider"></span></li><li ><a href="/NicoBobo" class="lahe-breadcrumb-anchor">Nico Bobo</a><span class="d-chevron1-r lahe-breadcrumb-divider"></span></li><li class="lahe-breadcrumb-item">Collection</li></ul></div>
+
+    <div class="d-cover-naked">
+      <div class="d-grid uco-cover-container-small">
+        <div class="uco-cover-left">
+          <img  class="uco-cover-avatar" src="https://media.senscritique.com/missing/203/55x55/missing.jpg" alt="Avatar Nico Bobo" title="Avatar Nico Bobo">
+        </div>
+        <div class="d-heading1 d-cover-title uco-cover-content">
+          <h1>Collection de Nico Bobo</h1>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="uco-menu">
+      <div class="d-grid">
+        <a href="/parametres" class="uco-controls d-button">Paramètres</a>
+
+        <ul class="d-tabs">
+          <li>
+            <a href="/NicoBobo" class="d-tabs-item ">
+              Profil
+            </a>
+          </li>
+          <li>
+            <a href="/NicoBobo/journal" class="d-tabs-item ">Journal</a>
+          </li>
+          <li>
+            <a href="/NicoBobo/collection" class="d-tabs-item active">Collection</a>
+          </li>
+          <li>
+            <a href="/NicoBobo/critiques" class="d-tabs-item ">Critiques</a>
+          </li>
+          <li>
+            <a href="/NicoBobo/contacts" class="d-tabs-item ">Contacts</a>
+          </li>
+          <li>
+            <a href="/NicoBobo/likes" class="d-tabs-item ">Aime</a>
+          </li>
+          <li>
+            <a href="/NicoBobo/badges" class="d-tabs-item ">Badges</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="d-grid d-grid-extend">
+      <div class="d-grid-main">
+
+        <div data-rel="collection-container" data-sc-username="NicoBobo">
+
+
+
+
+
+
+
+          <div class="d-rubric-menu" data-sc-request-collection="{&quot;query&quot;:null,&quot;inversed&quot;:null,&quot;subtype&quot;:null,&quot;page&quot;:&quot;1&quot;,&quot;limit&quot;:18,&quot;filter&quot;:&quot;wish&quot;,&quot;versus&quot;:null,&quot;requestCategory&quot;:null,&quot;requestGamesystem&quot;:null,&quot;requestDateDone&quot;:null,&quot;requestDateRelease&quot;:null,&quot;requestGenre&quot;:null,&quot;shelve&quot;:null,&quot;order&quot;:&quot;all&quot;}">
+            <div class="">
+
+              <form data-rel="collection-search" method="POST" action="/" class="cin-search-form">
+                <input data-rel="collection-search-input" type="text" placeholder="Recherche" value="" class="cin-search-input">
+                <input type="submit" name="submit" class="cin-search-action" value="Rechercher" />
+                <span class="eins-sprite eins-delete  cin-close cin-search-close" data-rel="search-close-btn"></span>
+              </form>
+              <div data-rel="search-open-btn" class="eins-magnify-glass cin-search-icon active"></div>
+
+              <div class="d-filter3 cin-filter toggle" data-rel="collection-subtype-container">
+                Univers : <span class="d-filter3-active " data-rel="collection-subtype-current">Tous</span> <span class="d-chevron1-b"></span>
+
+                <ul class="d-button-menu">
+                  <li class="d-button-menu-item active" data-rel="collection-subtype" data-sc-collection-subtype="all">
+                    <span class="d-button-menu-action">Tous <span class="elco-collection-count" data-rel="collection-subtype-count"></span></span>
+                  </li>
+                  <li class="d-button-menu-item " data-rel="collection-subtype" data-sc-collection-subtype="films">
+                    <span class="d-button-menu-action">Films <span class="elco-collection-count" data-rel="collection-subtype-count">(142)</span></span>
+                  </li>
+                  <li class="d-button-menu-item " data-rel="collection-subtype" data-sc-collection-subtype="series">
+                    <span class="d-button-menu-action">Séries <span class="elco-collection-count" data-rel="collection-subtype-count">(14)</span></span>
+                  </li>
+                  <li class="d-button-menu-item " data-rel="collection-subtype" data-sc-collection-subtype="livres">
+                    <span class="d-button-menu-action">Livres <span class="elco-collection-count" data-rel="collection-subtype-count">(2)</span></span>
+                  </li>
+                </ul>
+              </div>
+
+
+
+
+
+
+              <div class="d-filter3 cin-filter toggle liiu-filter" data-rel="collection-filter" data-hide="true">
+                Type d'action : <span class="d-filter3-active active">Envies</span> <span class="d-chevron1-b"></span>
+
+                <ul class="d-button-menu">
+                  <li class="d-button-menu-item " data-sc-collection-filter="all">
+                    <span class="d-button-menu-action">Tout <span class="elco-collection-count"></span></span>
+                  </li>
+                  <li class="d-button-menu-item active" data-sc-collection-filter="wish">
+                    <span class="d-button-menu-action">Envies <span class="elco-collection-count">(158)</span></span>
+                  </li>
+                  <li class="d-button-menu-item " data-sc-collection-filter="recommend">
+                    <span class="d-button-menu-action">Coups de coeur <span class="elco-collection-count">(2)</span></span>
+                  </li>
+                  <li class="d-button-menu-item " data-sc-collection-filter="rating">
+                    <span class="d-button-menu-action">Notés <span class="elco-collection-count">(46)</span></span>
+                  </li>
+                  <li class="d-button-menu-item " data-sc-collection-filter="done">
+                    <span class="d-button-menu-action">Achevés <span class="elco-collection-count">(47)</span></span>
+                  </li>
+                </ul>
+              </div>
+
+              <button type="button" class="cin-reset-filters" data-rel="reset-filters-btn" data-hide="true" data-sc-tooltip="true" title="Réinitialiser les filtres">
+                <span class="eins-sprite eins-delete  " ></span>
+              </button>
+            </div>
+          </div>
+
+
+          <div class=" cin-collection-filters" data-rel="collection-filters">
+            <div class="cin-display d-button-group" data-rel="collection-display"  data-sc-collection-default-shelves="1">
+              <button type="button"
+                      class="d-button first-child "
+                      data-rel="collection-display"
+                      data-sc-collection-shelves="gallery"
+                      data-sc-tooltip="true"
+                      title="Affichage sous forme d'étagères">
+                <span class="cin-display-shelves"></span>
+                <span class="eins-sprite eins-mosaicDisplay  cin-display-icon" ></span>
+              </button>
+              <button type="button"
+                      class="d-button last-child active"
+                      data-rel="collection-display"
+                      data-sc-collection-shelves="list"
+                      data-sc-tooltip="true"
+                      title="Affichage sous forme de liste">
+                <span class="eins-sprite eins-listDisplay  cin-display-icon" ></span>
+              </button>
+            </div>
+
+
+            <div class="d-filter3 toggle cin-order" data-rel="collection-order">
+              Trier par : <span class="d-filter3-active">Dernière action </span><span class="d-chevron1-b"></span>
+
+              <ul class="d-button-menu">
+                <li data-sc-collection-order="release_date" class="d-button-menu-item  ">
+                  <span class="d-button-menu-action">Date de sortie</span>
+                </li>
+                <li data-sc-collection-order="date" class="d-button-menu-item  ">
+                  <span class="d-button-menu-action">Dernière action</span>
+                </li>
+                <li data-sc-collection-order="my_rating" class="d-button-menu-item  ">
+                  <span class="d-button-menu-action">Ma note</span>
+                </li>
+                <li data-sc-collection-order="scouts_rating" class="d-button-menu-item  ">
+                  <span class="d-button-menu-action"> Note éclaireurs</span>
+                </li>
+                <li data-sc-collection-order="global_rating" class="d-button-menu-item  ">
+                  <span class="d-button-menu-action">Note globale</span>
+                </li>
+                <li data-sc-collection-order="popularite" class="d-button-menu-item  ">
+                  <span class="d-button-menu-action">Popularité</span>
+                </li>
+                <li data-sc-collection-order="titre" class="d-button-menu-item  ">
+                  <span class="d-button-menu-action">Titre</span>
+                </li>
+              </ul>
+            </div>
+
+
+          </div>
+
+
+
+          <div data-rel="collection-content" data-sc-collections-count="{&quot;1&quot;:{&quot;total_collection&quot;:&quot;142&quot;},&quot;2&quot;:{&quot;total_collection&quot;:&quot;2&quot;},&quot;4&quot;:{&quot;total_collection&quot;:&quot;14&quot;}}">
+
+
+
+
+
+
+
+
+            <div class="eipa-interface eipa-top">
+              <ul data-rel="pager" class="eipa-pages">
+
+
+                <li class="eipa-page">
+                  <span data-sc-pager-page="1" class="eipa-current">1</span>
+                </li>
+
+                <li class="eipa-page">
+                  <a href="/NicoBobo/collection/wish/all/all/all/all/all/all/all/page-2" class="eipa-anchor" data-sc-pager-page="2">2</a>
+                </li>
+
+                <li class="eipa-page">
+                  <a href="/NicoBobo/collection/wish/all/all/all/all/all/all/all/page-3" class="eipa-anchor" data-sc-pager-page="3">3</a>
+                </li>
+
+                <li class="eipa-page">
+                  <a href="/NicoBobo/collection/wish/all/all/all/all/all/all/all/page-4" class="eipa-anchor" data-sc-pager-page="4">4</a>
+                </li>
+
+                <li class="eipa-page">
+                  <a href="/NicoBobo/collection/wish/all/all/all/all/all/all/all/page-5" class="eipa-anchor" data-sc-pager-page="5">5</a>
+                </li>
+
+                <li class="eipa-page">
+                  <a href="/NicoBobo/collection/wish/all/all/all/all/all/all/all/page-6" class="eipa-anchor" data-sc-pager-page="6">6</a>
+                </li>
+
+                <li class="eipa-page">
+                  <a href="/NicoBobo/collection/wish/all/all/all/all/all/all/all/page-9" class="eipa-anchor" data-sc-pager-page="9">...9</a>
+                </li>
+              </ul>
+            </div>
+
+
+
+            <div class="elco-collection elco-collection-myCollection">
+
+              <ul class="elco-collection-list">
+
+
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="362932" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="362932">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="362932"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Tucker_Dale_fightent_le_mal/362932">
+
+                        <img  class="" itemprop="image" src="https://media.senscritique.com/media/000006690123/90/Tucker_Dale_fightent_le_mal.jpg" alt="Affiche Tucker &amp; Dale fightent le mal" title="Affiche Tucker &amp; Dale fightent le mal" width="90" height="121">
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Tucker_Dale_fightent_le_mal/362932" class="elco-anchor" id="product-title-362932">Tucker &amp; Dale fightent le mal</a>
+
+                        <span class="elco-date">(2012)</span>
+
+                      </h2>
+                      <p class="elco-original-title">Tucker &amp; Dale vs. Evil</p>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 1 h 29 min.
+                        <time datetime="2012-02-01" >1 février 2012</time> (France).
+
+                        Comédie et
+
+                        Épouvante-horreur.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/Eli_Craig/513574" class="elco-baseline-a">Eli Craig</a>
+
+                        avec Tyler Labine, Alan Tudyk, Katrina Bowden
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Tucker_Dale_fightent_le_mal/362932/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 12872 avis">
+                              6.7							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="362932"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="426746" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="426746">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="426746"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Freaks_La_Monstrueuse_Parade/426746">
+
+                        <img  class="" itemprop="image" src="https://media.senscritique.com/media/000019236973/90/Freaks_La_Monstrueuse_Parade.jpg" alt="Affiche Freaks - La Monstrueuse Parade" title="Affiche Freaks - La Monstrueuse Parade" width="90" height="124">
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Freaks_La_Monstrueuse_Parade/426746" class="elco-anchor" id="product-title-426746">Freaks - La Monstrueuse Parade</a>
+
+                        <span class="elco-date">(1932)</span>
+
+                      </h2>
+                      <p class="elco-original-title">Freaks</p>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 1 h 04 min.
+                        <time datetime="1932-10-07" >7 octobre 1932</time> (France).
+
+                        Drame et
+
+                        thriller.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/Tod_Browning/2943" class="elco-baseline-a">Tod Browning</a>
+
+                        avec Wallace Ford, Leila Hyams, Olga Baclanova
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Freaks_La_Monstrueuse_Parade/426746/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 13052 avis">
+                              8.0							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="426746"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="376600" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="376600">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="376600"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Spinal_Tap/376600">
+
+                        <img  class="" itemprop="image" src="https://media.senscritique.com/media/000018830804/90/Spinal_Tap.jpg" alt="Affiche Spinal Tap" title="Affiche Spinal Tap" width="90" height="124">
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Spinal_Tap/376600" class="elco-anchor" id="product-title-376600">Spinal Tap</a>
+
+                        <span class="elco-date">(1984)</span>
+
+                      </h2>
+                      <p class="elco-original-title">This Is Spinal Tap</p>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 1 h 22 min.
+                        <time datetime="2000-11-01" >1 novembre 2000</time> (France).
+
+                        Comédie et
+
+                        musique.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/Rob_Reiner/8484" class="elco-baseline-a">Rob Reiner</a>
+
+                        avec Christopher Guest, Michael McKean, Harry Shearer
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Spinal_Tap/376600/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 4358 avis">
+                              7.1							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="376600"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="399869" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure class="d-media-only d-product-checked-wrapper small elco-collection-poster"
+                            data-sc-product-id="399869"
+                    >
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/La_Prisonniere_espagnole/399869">
+
+                        <img  class="" itemprop="image" src="https://media.senscritique.com/media/000004466871/90/La_Prisonniere_espagnole.gif" alt="Affiche La Prisonnière espagnole" title="Affiche La Prisonnière espagnole" width="90" height="123">
+
+                      </div>
+
+
+                    </figure>
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/La_Prisonniere_espagnole/399869" class="elco-anchor" id="product-title-399869">La Prisonnière espagnole</a>
+
+                        <span class="elco-date">(1997)</span>
+
+                      </h2>
+                      <p class="elco-original-title">The Spanish Prisoner</p>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 1 h 50 min.
+                        <time datetime="1998-01-07" >7 janvier 1998</time> (France).
+
+                        Drame et
+
+                        thriller.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/David_Mamet/4460" class="elco-baseline-a">David Mamet</a>
+
+                        avec Campbell Scott, Steve Martin, Rebecca Pidgeon
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/La_Prisonniere_espagnole/399869/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 406 avis">
+                              7.0							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="399869"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="417734" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="417734">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="417734"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Le_Samourai_du_crepuscule/417734">
+
+                        <img  class="" itemprop="image" src="https://media.senscritique.com/media/000013073493/90/Le_Samourai_du_crepuscule.jpg" alt="Affiche Le Samouraï du crépuscule" title="Affiche Le Samouraï du crépuscule" width="90" height="119">
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Le_Samourai_du_crepuscule/417734" class="elco-anchor" id="product-title-417734">Le Samouraï du crépuscule</a>
+
+                        <span class="elco-date">(2002)</span>
+
+                      </h2>
+                      <p class="elco-original-title">Tasogare Seibei</p>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 2 h 05 min.
+                        <time datetime="2006-05-10" >10 mai 2006</time> (France).
+
+                        Drame,
+
+                        romance,
+
+                        aventure et
+
+                        arts martiaux.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/Yoji_Yamada/24029" class="elco-baseline-a">Yôji Yamada</a>
+
+                        avec Hiroyuki Sanada, Rie Miyazawa, Nenji Kobayashi
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Le_Samourai_du_crepuscule/417734/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 535 avis">
+                              7.7							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="417734"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="490568" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="490568">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="490568"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Le_Fils_de_Rambow/490568">
+
+                        <img  class="lazy" itemprop="image" data-original="https://media.senscritique.com/media/000000163470/90/Le_Fils_de_Rambow.jpg" alt="Affiche Le Fils de Rambow" title="Affiche Le Fils de Rambow" width="90" height="124"><noscript><img  class="lazy" itemprop="image" src="" alt="Affiche Le Fils de Rambow" title="Affiche Le Fils de Rambow" width="90" height="124" data-original="https://media.senscritique.com/media/000000163470/90/Le_Fils_de_Rambow.jpg"></noscript>
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Le_Fils_de_Rambow/490568" class="elco-anchor" id="product-title-490568">Le Fils de Rambow</a>
+
+                        <span class="elco-date">(2008)</span>
+
+                      </h2>
+                      <p class="elco-original-title">Son of Rambow</p>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 1 h 36 min.
+                        <time datetime="2008-04-04" >4 avril 2008</time> (États-Unis).
+
+                        Action,
+
+                        aventure,
+
+                        comédie et
+
+                        drame.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/Garth_Jennings/85614" class="elco-baseline-a">Garth Jennings</a>
+
+                        avec Neil Dudgeon, Bill Milner, Jessica Stevenson
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Le_Fils_de_Rambow/490568/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 384 avis">
+                              6.7							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="490568"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="31884658" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="31884658">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="31884658"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Hearts_Beat_Loud/31884658">
+
+                        <img  class="lazy" itemprop="image" data-original="https://media.senscritique.com/media/000017902262/90/Hearts_Beat_Loud.jpg" alt="Affiche Hearts Beat Loud" title="Affiche Hearts Beat Loud" width="90" height="124"><noscript><img  class="lazy" itemprop="image" src="" alt="Affiche Hearts Beat Loud" title="Affiche Hearts Beat Loud" width="90" height="124" data-original="https://media.senscritique.com/media/000017902262/90/Hearts_Beat_Loud.jpg"></noscript>
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Hearts_Beat_Loud/31884658" class="elco-anchor" id="product-title-31884658">Hearts Beat Loud</a>
+
+                        <span class="elco-date">(2018)</span>
+
+                      </h2>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 1 h 37 min.
+                        <time datetime="2018-06-08" >8 juin 2018</time> (États-Unis).
+
+                        Drame et
+
+                        musique.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/Brett_Haley/1846503" class="elco-baseline-a">Brett Haley</a>
+
+                        avec Nick Offerman, Kiersey Clemons, Ted Danson
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Hearts_Beat_Loud/31884658/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 145 avis">
+                              6.4							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="31884658"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="400517" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="400517">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="400517"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Stardust_Le_Mystere_de_l_Etoile/400517">
+
+                        <img  class="lazy" itemprop="image" data-original="https://media.senscritique.com/media/000004372857/90/Stardust_Le_Mystere_de_l_Etoile.jpg" alt="Affiche Stardust - Le Mystère de l&#039;Étoile" title="Affiche Stardust - Le Mystère de l&#039;Étoile" width="90" height="120"><noscript><img  class="lazy" itemprop="image" src="" alt="Affiche Stardust - Le Mystère de l&#039;Étoile" title="Affiche Stardust - Le Mystère de l&#039;Étoile" width="90" height="120" data-original="https://media.senscritique.com/media/000004372857/90/Stardust_Le_Mystere_de_l_Etoile.jpg"></noscript>
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Stardust_Le_Mystere_de_l_Etoile/400517" class="elco-anchor" id="product-title-400517">Stardust - Le Mystère de l&#039;Étoile</a>
+
+                        <span class="elco-date">(2007)</span>
+
+                      </h2>
+                      <p class="elco-original-title">Stardust</p>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 2 h 02 min.
+                        <time datetime="2007-10-24" >24 octobre 2007</time> (France).
+
+                        Drame,
+
+                        romance,
+
+                        aventure,
+
+                        fantasy et
+
+                        action.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/Matthew_Vaughn/44650" class="elco-baseline-a">Matthew Vaughn</a>
+
+                        avec Charlie Cox, Claire Danes, Michelle Pfeiffer
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Stardust_Le_Mystere_de_l_Etoile/400517/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 7417 avis">
+                              6.2							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="400517"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="29056140" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="29056140">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="29056140"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Derniere_Annee/29056140">
+
+                        <img  class="lazy" itemprop="image" data-original="https://media.senscritique.com/media/000017667803/90/Derniere_Annee.jpg" alt="Affiche Dernière Année" title="Affiche Dernière Année" width="90" height="124"><noscript><img  class="lazy" itemprop="image" src="" alt="Affiche Dernière Année" title="Affiche Dernière Année" width="90" height="124" data-original="https://media.senscritique.com/media/000017667803/90/Derniere_Annee.jpg"></noscript>
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Derniere_Annee/29056140" class="elco-anchor" id="product-title-29056140">Dernière Année</a>
+
+                        <span class="elco-date">(2018)</span>
+
+                      </h2>
+                      <p class="elco-original-title">Eighth Grade</p>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 1 h 34 min.
+                        <time datetime="2019-04-03" >3 avril 2019</time> (France).
+
+                        Comédie.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/Bo_Burnham/787358" class="elco-baseline-a">Bo Burnham</a>
+
+                        avec Elsie Fisher, Josh Hamilton, Emily Robinson
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Derniere_Annee/29056140/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 1238 avis">
+                              6.8							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="29056140"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="21077620" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="21077620">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="21077620"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Under_the_Silver_Lake/21077620">
+
+                        <img  class="lazy" itemprop="image" data-original="https://media.senscritique.com/media/000017877819/90/Under_the_Silver_Lake.jpg" alt="Affiche Under the Silver Lake" title="Affiche Under the Silver Lake" width="90" height="120"><noscript><img  class="lazy" itemprop="image" src="" alt="Affiche Under the Silver Lake" title="Affiche Under the Silver Lake" width="90" height="120" data-original="https://media.senscritique.com/media/000017877819/90/Under_the_Silver_Lake.jpg"></noscript>
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Under_the_Silver_Lake/21077620" class="elco-anchor" id="product-title-21077620">Under the Silver Lake</a>
+
+                        <span class="elco-date">(2018)</span>
+
+                      </h2>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 2 h 20 min.
+                        <time datetime="2018-08-08" >8 août 2018</time> (France).
+
+                        Thriller,
+
+                        drame,
+
+                        comédie et
+
+                        film noir.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/David_Robert_Mitchell/510061" class="elco-baseline-a">David Robert Mitchell</a>
+
+                        avec Andrew Garfield, Riley Keough, Jimmi Simpson
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Under_the_Silver_Lake/21077620/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 14343 avis">
+                              6.8							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="21077620"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="469295" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="469295">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="469295"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Matewan/469295">
+
+                        <img  class="lazy" itemprop="image" data-original="https://media.senscritique.com/media/000000029538/90/Matewan.jpg" alt="Affiche Matewan" title="Affiche Matewan" width="90" height="124"><noscript><img  class="lazy" itemprop="image" src="" alt="Affiche Matewan" title="Affiche Matewan" width="90" height="124" data-original="https://media.senscritique.com/media/000000029538/90/Matewan.jpg"></noscript>
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Matewan/469295" class="elco-anchor" id="product-title-469295">Matewan</a>
+
+                        <span class="elco-date">(1987)</span>
+
+                      </h2>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 2 h 12 min.
+                        1987 (France).
+
+                        Drame et
+
+                        historique.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/John_Sayles/4153" class="elco-baseline-a">John Sayles</a>
+
+                        avec Chris Cooper, James Earl Jones, Mary McDonnell
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Matewan/469295/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 64 avis">
+                              7.4							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="469295"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="383064" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure class="d-media-only d-product-checked-wrapper small elco-collection-poster"
+                            data-sc-product-id="383064"
+                    >
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/La_Bande_des_quatre/383064">
+
+                        <img  class="lazy" itemprop="image" data-original="https://media.senscritique.com/media/000018248997/90/La_Bande_des_quatre.jpg" alt="Affiche La Bande des quatre" title="Affiche La Bande des quatre" width="90" height="115"><noscript><img  class="lazy" itemprop="image" src="" alt="Affiche La Bande des quatre" title="Affiche La Bande des quatre" width="90" height="115" data-original="https://media.senscritique.com/media/000018248997/90/La_Bande_des_quatre.jpg"></noscript>
+
+                      </div>
+
+
+                    </figure>
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/La_Bande_des_quatre/383064" class="elco-anchor" id="product-title-383064">La Bande des quatre</a>
+
+                        <span class="elco-date">(1979)</span>
+
+                      </h2>
+                      <p class="elco-original-title">Breaking Away</p>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 1 h 41 min.
+                        <time datetime="1980-01-09" >9 janvier 1980</time> (France).
+
+                        Comédie dramatique,
+
+                        romance et
+
+                        sport.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/Peter_Yates/154" class="elco-baseline-a">Peter Yates</a>
+
+                        avec Dennis Christopher, Dennis Quaid, Daniel Stern
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/La_Bande_des_quatre/383064/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 407 avis">
+                              7.5							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="383064"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="416405" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="416405">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="416405"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Au_nom_du_pere/416405">
+
+                        <img  class="lazy" itemprop="image" data-original="https://media.senscritique.com/media/000020313148/90/Au_nom_du_pere.jpg" alt="Affiche Au nom du père" title="Affiche Au nom du père" width="90" height="119"><noscript><img  class="lazy" itemprop="image" src="" alt="Affiche Au nom du père" title="Affiche Au nom du père" width="90" height="119" data-original="https://media.senscritique.com/media/000020313148/90/Au_nom_du_pere.jpg"></noscript>
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Au_nom_du_pere/416405" class="elco-anchor" id="product-title-416405">Au nom du père</a>
+
+                        <span class="elco-date">(1993)</span>
+
+                      </h2>
+                      <p class="elco-original-title">In the Name of the Father</p>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 2 h 13 min.
+                        <time datetime="1994-03-09" >9 mars 1994</time> (France).
+
+                        Biopic,
+
+                        drame et
+
+                        thriller.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/Jim_Sheridan/17402" class="elco-baseline-a">Jim Sheridan</a>
+
+                        avec Daniel Day-Lewis, Pete Postlethwaite, Emma Thompson
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Au_nom_du_pere/416405/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 5872 avis">
+                              7.8							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="416405"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="804225" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="804225">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="804225"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Hunger/804225">
+
+                        <img  class="lazy" itemprop="image" data-original="https://media.senscritique.com/media/000004239070/90/Hunger.jpg" alt="Affiche Hunger" title="Affiche Hunger" width="90" height="120"><noscript><img  class="lazy" itemprop="image" src="" alt="Affiche Hunger" title="Affiche Hunger" width="90" height="120" data-original="https://media.senscritique.com/media/000004239070/90/Hunger.jpg"></noscript>
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Hunger/804225" class="elco-anchor" id="product-title-804225">Hunger</a>
+
+                        <span class="elco-date">(2008)</span>
+
+                      </h2>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 1 h 40 min.
+                        <time datetime="2008-11-26" >26 novembre 2008</time> (France).
+
+                        Drame et
+
+                        historique.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/Steve_Mc_Queen/110063" class="elco-baseline-a">Steve McQueen</a>
+
+                        avec Michael Fassbender, Liam Cunningham, Stuart Graham
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Hunger/804225/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 9557 avis">
+                              7.4							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="804225"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="41448552" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="41448552">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="41448552"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/A_l_abordage/41448552">
+
+                        <img  class="lazy" itemprop="image" data-original="https://media.senscritique.com/media/000020120473/90/A_l_abordage.jpg" alt="Affiche À l&#039;abordage" title="Affiche À l&#039;abordage" width="90" height="120"><noscript><img  class="lazy" itemprop="image" src="" alt="Affiche À l&#039;abordage" title="Affiche À l&#039;abordage" width="90" height="120" data-original="https://media.senscritique.com/media/000020120473/90/A_l_abordage.jpg"></noscript>
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/A_l_abordage/41448552" class="elco-anchor" id="product-title-41448552">À l&#039;abordage</a>
+
+                        <span class="elco-date">(2020)</span>
+
+                      </h2>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 1 h 36 min.
+                        <time datetime="2021-05-28" >28 mai 2021</time> (France).
+
+                        Comédie.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Téléfilm
+
+                        de <a href="/contact/Guillaume_Brac/513417" class="elco-baseline-a">Guillaume Brac</a>
+
+                        avec Eric Nantchouang, Salif Cissé, Édouard Sulpice
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/A_l_abordage/41448552/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 2514 avis">
+                              7.5							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="41448552"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="44872717" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="44872717">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="44872717"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Michael_Cimino_Un_mirage_americain/44872717">
+
+                        <img  class="lazy" itemprop="image" data-original="https://media.senscritique.com/media/000020420492/90/Michael_Cimino_Un_mirage_americain.png" alt="Affiche Michael Cimino - Un mirage américain" title="Affiche Michael Cimino - Un mirage américain" width="90" height="122"><noscript><img  class="lazy" itemprop="image" src="" alt="Affiche Michael Cimino - Un mirage américain" title="Affiche Michael Cimino - Un mirage américain" width="90" height="122" data-original="https://media.senscritique.com/media/000020420492/90/Michael_Cimino_Un_mirage_americain.png"></noscript>
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Michael_Cimino_Un_mirage_americain/44872717" class="elco-anchor" id="product-title-44872717">Michael Cimino - Un mirage américain</a>
+
+                        <span class="elco-date">(2022)</span>
+
+                      </h2>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 2 h 10 min.
+                        <time datetime="2022-01-19" >19 janvier 2022</time> (France).
+
+                        Portrait et
+
+                        cinéma.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Documentaire
+
+                        de <a href="/contact/Jean_Baptiste_Thoret/239394" class="elco-baseline-a">Jean-Baptiste Thoret</a>
+
+                        avec John Savage, Tommy Fitzgerald, Jim Freiling
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Michael_Cimino_Un_mirage_americain/44872717/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 122 avis">
+                              7.1							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="44872717"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="26499757" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="26499757">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="26499757"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Thunder_Road/26499757">
+
+                        <img  class="lazy" itemprop="image" data-original="https://media.senscritique.com/media/000017947863/90/Thunder_Road.jpg" alt="Affiche Thunder Road" title="Affiche Thunder Road" width="90" height="122"><noscript><img  class="lazy" itemprop="image" src="" alt="Affiche Thunder Road" title="Affiche Thunder Road" width="90" height="122" data-original="https://media.senscritique.com/media/000017947863/90/Thunder_Road.jpg"></noscript>
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Thunder_Road/26499757" class="elco-anchor" id="product-title-26499757">Thunder Road</a>
+
+                        <span class="elco-date">(2018)</span>
+
+                      </h2>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 1 h 31 min.
+                        <time datetime="2018-09-12" >12 septembre 2018</time> (France).
+
+                        Comédie et
+
+                        drame.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/Jim_Cummings/3804135" class="elco-baseline-a">Jim Cummings</a>
+
+                        avec Jim Cummings, Kendal Farr, Nican Robinson
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Thunder_Road/26499757/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 4008 avis">
+                              6.7							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="26499757"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+
+                <li class="elco-collection-item">
+                  <div class="elco-collection-rating">
+
+
+                    <div class="elrua-useraction size-40 naked ">
+
+                      <div class="elrua-useraction-action currentUser"
+                           data-rel="sc-button" data-button="collection" data-sc-product-id="44085654" data-sc-zone-tag="btsc">
+									<span class="elrua-useraction-inner only-child"  data-sc-action-container="user" data-rel="sc-action">
+						<span class="eins-sprite eins-wish-list  white elrua-useraction-ico" ></span>					</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="elco-collection-content myCollection">
+
+
+
+
+
+
+                    <figure	class="d-media small d-product-checked-wrapper elco-collection-poster"
+                               data-rel=" "
+                               data-sc-product-id="44085654">
+
+                      <div class="d-media-videos "
+                           data-rel="btn-play-product"
+                           data-sc-product-id="44085654"
+                           data-sc-play-type="videos"
+                           data-sc-parameter-id="0"
+                           data-sc-play-value="">
+                      </div>
+
+
+                      <div class="d-link" data-rel="js-link" data-sc-link="/film/Copshop/44085654">
+
+                        <img  class="lazy" itemprop="image" data-original="https://media.senscritique.com/media/000020170005/90/Copshop.jpg" alt="Affiche Copshop" title="Affiche Copshop" width="90" height="124"><noscript><img  class="lazy" itemprop="image" src="" alt="Affiche Copshop" title="Affiche Copshop" width="90" height="124" data-original="https://media.senscritique.com/media/000020170005/90/Copshop.jpg"></noscript>
+
+                      </div>
+
+
+                    </figure>
+
+
+
+                    <div class="elco-product-detail">
+
+
+                      <h2 class="d-heading2 elco-title">
+                        <a href="/film/Copshop/44085654" class="elco-anchor" id="product-title-44085654">Copshop</a>
+
+                        <span class="elco-date">(2021)</span>
+
+                      </h2>
+
+                      <p class="elco-baseline elco-options">
+
+                        <span class="eins-sprite eins-clock  elco-clock" ></span> 1 h 48 min.
+                        <time datetime="2021-12-13" >13 décembre 2021</time> (France).
+
+                        Action et
+
+                        thriller.
+
+
+
+
+
+
+
+                      </p>
+
+                      <p class="elco-baseline">
+                        Film
+
+                        de <a href="/contact/Joe_Carnahan/73190" class="elco-baseline-a">Joe Carnahan</a>
+
+                        avec Gerard Butler, Frank Grillo, Toby Huss
+
+                      </p>
+
+
+
+
+
+
+
+                      <div class="erra user">
+                        <div class="erra-main">
+                          <div class="erra-ratings">
+                            <a href="/film/Copshop/44085654/critiques" class="erra-global"
+                               data-sc-tooltip="true"
+                               title="Note globale pondérée sur : 433 avis">
+                              5.8							</a>
+                            <span
+                                    class="erra-scouts"
+                                    data-sc-tooltip="true"
+                                    data-rel="sc-modal-listing-activity scouts-rating"
+                                    data-sc-product-id="44085654"
+                                    title="Aucune note de vos éclaireurs"
+                                    data-sc-filter="rating,is_recommend,is_wish_list_or_shopping,is_current">
+							-
+						</span>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                      </div>
+
+
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="eipa-interface eipa-bottom">
+              <ul data-rel="pager" class="eipa-pages">
+
+
+                <li class="eipa-page">
+                  <span data-sc-pager-page="1" class="eipa-current">1</span>
+                </li>
+
+                <li class="eipa-page">
+                  <a href="/NicoBobo/collection/wish/all/all/all/all/all/all/all/page-2" class="eipa-anchor" data-sc-pager-page="2">2</a>
+                </li>
+
+                <li class="eipa-page">
+                  <a href="/NicoBobo/collection/wish/all/all/all/all/all/all/all/page-3" class="eipa-anchor" data-sc-pager-page="3">3</a>
+                </li>
+
+                <li class="eipa-page">
+                  <a href="/NicoBobo/collection/wish/all/all/all/all/all/all/all/page-4" class="eipa-anchor" data-sc-pager-page="4">4</a>
+                </li>
+
+                <li class="eipa-page">
+                  <a href="/NicoBobo/collection/wish/all/all/all/all/all/all/all/page-5" class="eipa-anchor" data-sc-pager-page="5">5</a>
+                </li>
+
+                <li class="eipa-page">
+                  <a href="/NicoBobo/collection/wish/all/all/all/all/all/all/all/page-6" class="eipa-anchor" data-sc-pager-page="6">6</a>
+                </li>
+
+                <li class="eipa-page">
+                  <a href="/NicoBobo/collection/wish/all/all/all/all/all/all/all/page-9" class="eipa-anchor" data-sc-pager-page="9">...9</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <aside class="d-grid-aside">
+
+      </aside>
+    </div>
+
+
+
+    <footer class="lafo-footer">
+
+      <div class="d-grid lafo-footer-container">
+        <ul class="lafo-informations-list">
+          <li>
+            <a href="https://senscritique-com.medium.com" class="lafo-footer-anchor" target="_blank">Blog</a>
+          </li>
+          <li>
+            <a href="/apropos" class="lafo-footer-anchor">&Agrave; propos</a>
+          </li>
+          <li>
+            <a href="/faq" class="lafo-footer-anchor">Aide</a>
+          </li>
+          <li>
+            <a class="lafo-footer-anchor action-popup-support">Nous contacter</a>
+          </li>
+          <li>
+            <a href="/apropos/publicite" class="lafo-footer-anchor">Publicité</a>
+          </li>
+          <li>
+            <a href="/apropos/emploi" class="lafo-footer-anchor">Emploi</a>
+          </li>
+          <li>
+            <a href="/cgu" class="lafo-footer-anchor">Conditions d'utilisation</a>
+          </li>
+        </ul>
+
+        <div class="lafo-social">
+          <a href="http://www.facebook.com/senscritique" target="_blank" class="lafoo-footer-social" rel="noopener noreferrer">
+            <span class="eins-sprite eins-facebook  " ></span>
+          </a>
+          <a href="https://twitter.com/senscritique" target="_blank" class="lafoo-footer-social" rel="noopener noreferrer">
+            <span class="eins-sprite eins-twitter  " ></span>
+          </a>
+          <a href="https://www.youtube.com/channel/UC0z41jmnOz-YHrmECr9sVzw" target="_blank" class="lafoo-footer-social" rel="noopener noreferrer">
+            <span class="eins-sprite eins-youtube  " ></span>
+          </a>
+          <a href="https://www.instagram.com/senscritique/" target="_blank" class="lafoo-footer-social" rel="noopener noreferrer">
+            <span class="eins-sprite eins-instagram-header-color  " ></span>
+          </a>
+
+          <!-- Place this tag after the last +1 button tag. -->
+          <script type="text/javascript">
+				window.___gcfg = {lang: 'fr'};
+
+				(function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				})();
+			</script>
+        </div>
+      </div>
+
+
+      <div class="d-grid">
+        <ul class="lafo-resume">
+          <li><a href="/everymovie/programme-tv/ce-soir" class="lafo-resume-item">Programme TV ce soir</a></li>
+          <li><a href="/everymovie/programme-tv/aujourdhui" class="lafo-resume-item">Programme TV aujourd'hui</a></li>
+          <li><a href="/everymovie/programme-tv/demain" class="lafo-resume-item">Programme TV demain</a></li>
+          <li><a href="/everymovie/programme-tv" class="lafo-resume-item inactive">Programme TV cette semaine</a></li>
+        </ul>
+        <ul class="lafo-resume">
+          <li>
+            <a href="/films/oeuvres" class="lafo-resume-item ">Avis films</a>
+          </li>
+          <li>
+            <a href="/series/oeuvres" class="lafo-resume-item ">Avis séries</a>
+          </li>
+          <li>
+            <a href="/livres/oeuvres" class="lafo-resume-item ">Avis livres</a>
+          </li>
+          <li>
+            <a href="/bd/oeuvres" class="lafo-resume-item ">Avis BD</a>
+          </li>
+          <li>
+            <a href="/jeuxvideo/oeuvres" class="lafo-resume-item ">Avis jeux vidéo</a>
+          </li>
+          <li>
+            <a href="/musique/oeuvres" class="lafo-resume-item inactive">Avis musique</a>
+          </li>
+        </ul>
+        <span class="lafo-copyright">© 2022 SensCritique</span>
+        <small style="float: right;color: #ccc;">01</small>
+      </div>
+
+    </footer>
+  </div>
+</div>
+
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Video.js 5 -->
+<script src="https://vjs.zencdn.net/5.4.6/video.js"></script>
+<!-- Common -->
+<!-- Video.js 5 -->
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCWZKr1P6oP9Wb7dA1S_RMYBz-rp9-mHMw",
+        authDomain: "fir-sc-ea332.firebaseapp.com",
+        databaseURL: "https://fir-sc-ea332.firebaseio.com",
+        projectId: "fir-sc-ea332",
+        storageBucket: "fir-sc-ea332.appspot.com",
+        messagingSenderId: "1075391698540"
+    };
+    firebase.initializeApp(config);
+</script>			<script>
+				var adsAllowed = false;
+			</script>
+<script src="https://static.senscritique.com/lib/ads.js"></script>
+
+<script>window.jQuery || document.write('<script src="https://static.senscritique.com/lib/plugins/jquery.js"><\/script>')</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://static.senscritique.com/lib/optimized_ln/layouts/default.html.min.js?datetime=20220204165523"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://static.senscritique.com/lib/optimized_ln/collections/index.html.min.js?datetime=20220204165523"></script>
+
+
+<div data-rel="fb_container" data-sc-id="157003860988959"></div>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+	appId:'157003860988959',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.12'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/fr_FR/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>var ddjskey = "9DC237E26980E18ED016F0EEFE6B27";</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"a2ca6cf22e","applicationID":"44844768","transactionName":"NAdQNxFYWxZZVxEKCw1NcRYQTVoIF3cKDwgGAUYKDFdGSlFaAQYc","queueTime":0,"applicationTime":146,"atts":"GEBTQVlCSBg=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>
