@@ -25,7 +25,6 @@ class SensCritique:
             req = requests.get(SensCritique.TO_SEE_PAGE.format(1))
 
             if req.ok:
-                logging.debug(req.text)
                 self.soup = BeautifulSoup(req.text, 'html.parser')
             else:
                 self.soup = BeautifulSoup()
@@ -42,3 +41,16 @@ class SensCritique:
             count = max(count, int(tag.attrs['data-sc-pager-page']))
 
         return count
+
+    def get_movie_urls(self) -> list:
+        """
+        Get all the urls of the movies across all pages.
+        :return: a list of urls
+        """
+        list_of_movies = []
+        for i in range(1, self.get_page_count()):
+            page = requests.get(SensCritique.TO_SEE_PAGE.format(i))
+            soup = BeautifulSoup(page.text, 'html.parser')
+            list_of_movies.extend(map(lambda x: x['href'], soup.find_all('a', 'elco-anchor')))
+
+        return list_of_movies
