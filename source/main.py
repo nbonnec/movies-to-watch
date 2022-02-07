@@ -15,4 +15,4 @@ if __name__ == '__main__':
             title=d['title'],
             logo=d['urls'][0]['logo'],
             provider=d['urls'][0]['provider']))
-        print('    - {}'.format(d['synopsis']))
+        print('    - {}'.format(d['resume']))
