@@ -54,22 +54,25 @@ def get_movie_endpoints() -> list:
     return list_of_movies
 
 
-class MovieProviders:
-    def __init__(self, movie_soup: BeautifulSoup, providers: list):
+class MovieItem:
+    def __init__(self, endpoint: str, movie_soup: BeautifulSoup, providers: list):
+        self.endpoint: str = endpoint
+
         # join and split to clean texts
         self.title: str = ' '.join(movie_soup.title.text.split())
         self.resume: str = ' '.join(movie_soup.find('p', 'pvi-productDetails-resume').text.split()).replace(
             'Lire la suite', '')
+
         urls = []
         for provider in providers:
             urls.append({'provider': provider['href'], 'logo': provider.find('img', 'product-providers__logo')['src']})
         self.providers_urls: List[dict] = urls
 
     def get_dict(self):
-        return {'title': self.title, 'resume': self.resume, 'urls': self.providers_urls}
+        return {'title': self.title, 'endpoint': self.endpoint, 'resume': self.resume, 'urls': self.providers_urls}
 
 
-def get_movies_and_providers() -> List[MovieProviders]:
+def get_movies_and_providers() -> List[MovieItem]:
     """
     Fetch all movie pages and return the list of URLs to providers.
     :return: a list of the following dictionary:
@@ -80,12 +83,12 @@ def get_movies_and_providers() -> List[MovieProviders]:
     endpoints = [endpoint for endpoint in map(lambda x: ROOT_URL + x, get_movie_endpoints())]
     logging.debug(endpoints)
 
-    movies_and_providers = []
+    items = []
     for endpoint in endpoints:
         request = requests.get(endpoint)
         if request.ok:
             soup = BeautifulSoup(request.text, 'html.parser')
             providers = soup.find_all('a', 'product-providers__item', 'href')
             if len(providers):
-                movies_and_providers.append(MovieProviders(soup, providers))
-    return movies_and_providers
+                items.append(MovieItem(endpoint, soup, providers))
+    return items

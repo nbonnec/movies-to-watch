@@ -11,8 +11,9 @@ if __name__ == '__main__':
     for movie in movies:
         d = movie.get_dict()
         # FIXME manage multiple providers
-        print('- **{title}** [<img src="{logo}" alt="provider-logo" style="width:20px;"/>]({provider})'.format(
+        print('- **[{title}]({endpoint})** [<img src="{logo}" alt="provider-logo" style="width:20px;"/>]({provider})'.format(
             title=d['title'],
+            endpoint=d['endpoint'],
             logo=d['urls'][0]['logo'],
             provider=d['urls'][0]['provider']))
         print('    - {}'.format(d['resume']))
