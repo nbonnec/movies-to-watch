@@ -20,7 +20,13 @@ if __name__ == '__main__':
     movies = SensCritique.get_movies_and_providers()
 
     # Print in markdown format
-    for title_resume, providers in movies:
-        print('- **[{title}]({endpoint})** {providers}'.format(title=title_resume[0], endpoint=providers[0],
-                                                               providers=build_providers_string(providers)))
+    for title_resume, url, providers, tv_release in movies:
+        print('- **[{title}]({endpoint})**'.format(title=title_resume[0], endpoint=url), end='')
+
+        if providers:
+            print(' {}'.format(build_providers_string(providers)), end='')
+        if tv_release:
+            print(' {}'.format(tv_release), end='')
+
+        print()
         print('    - {}'.format(title_resume[1]))

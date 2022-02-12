@@ -4,7 +4,7 @@ Functions to access the SensCritique site.
 
 import requests
 from bs4 import BeautifulSoup
-from typing import List, Tuple
+from typing import List, Tuple, Optional
 
 ROOT_URL = 'https://www.senscritique.com'
 DESIRES_PAGE = ROOT_URL + '/NicoBobo/collection/wish/all/all/all/all/all/all/all/all/page-{}'
@@ -90,7 +90,7 @@ Providers = List[Tuple[str, str]]
 TitleAndResume = Tuple[str, str]
 
 
-def _extract_providers(soup: BeautifulSoup) -> Providers:
+def _extract_providers(soup: BeautifulSoup) -> Optional[Providers]:
     """
     Get the providers in the soup.
 
@@ -114,26 +114,39 @@ def _extract_title_and_resume(soup: BeautifulSoup) -> TitleAndResume:
     :param soup: the soup of a movie
     :return: both title and resume as a text
     """
-    title = ' '.join(soup.title.text.split())
-    resume = ' '.join(soup.find('p', 'pvi-productDetails-resume').text.split()).replace('Lire la suite', '')
+    title = ' '.join(soup.title.text.split()) if soup.title is not None else 'No title'
+    resume_tag = soup.find('p', 'pvi-productDetails-resume')
+    resume = ' '.join(resume_tag.text.split()).replace('Lire la suite', '') if resume_tag is not None else 'No resume'
     return title, resume
 
 
-def get_movies_and_providers() -> zip(TitleAndResume, Providers):
+def _extract_tv_release(soup: BeautifulSoup) -> Optional[str]:
+    tag = soup.find('li', 'pvi-tvRelease')
+    return ' '.join(tag.text.split()) if tag is not None else None
+
+
+def get_movies_and_providers() -> zip(TitleAndResume, List[str], Providers, List[str]):
     """
     Fetch all movie pages and return the list of URLs to providers.
 
     :return: a zip with Providers and TitleAndResume
     """
-    providers = []
-    title_and_resumes = []
+    sc_urls: List[str] = []
+    providers: [Providers] = []
+    title_and_resumes: List[TitleAndResume] = []
+    tv_release = []
     for url in get_desire_movies_urls():
         request = requests.get(url)
         if request.ok:
             soup = _get_soup_from_page(request.text)
-            prov = _extract_providers(soup)
-            if len(prov):
-                providers.append(prov)
-                title_and_resumes.append(_extract_title_and_resume(soup))
 
-    return zip(title_and_resumes, providers)
+            prov = _extract_providers(soup)
+            tv = _extract_tv_release(soup)
+
+            if prov or tv:
+                title_and_resumes.append(_extract_title_and_resume(soup))
+                sc_urls.append(url)
+                providers.append(prov)
+                tv_release.append(tv)
+
+    return zip(title_and_resumes, sc_urls, providers, tv_release)

@@ -43,6 +43,15 @@ class TestSensCritique(unittest.TestCase):
                          'Victoria, espagnole fraîchement débarquée à Berlin, rencontre un groupe d\'amis.'
                          ' Elle décide de les suivre se laissant entraîner par la fête jusqu\'au dérapage.')
 
+    def test_extract_tv_release(self) -> None:
+        soup = _get_soup_from_file(RESOURCES_FOLDER + 'victoria.html')
+        release = SC._extract_tv_release(soup)
+        self.assertEqual(release, None)
+
+        soup = _get_soup_from_file(RESOURCES_FOLDER + 'certains-laiment-chaud.html')
+        release = SC._extract_tv_release(soup)
+        self.assertEqual(release, 'mercredi 16 février sur Ciné+ Classic à 20:50')
+
 
 if __name__ == '__main__':
     unittest.main()
