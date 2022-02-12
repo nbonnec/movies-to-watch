@@ -2,54 +2,68 @@
 Functions to access the SensCritique site.
 """
 
-import logging
 import requests
 from bs4 import BeautifulSoup
-from typing import List
+from typing import List, Tuple
 
 ROOT_URL = 'https://www.senscritique.com'
-TO_SEE_PAGE = ROOT_URL + '/NicoBobo/collection/wish/all/all/all/all/all/all/all/all/page-{}'
+DESIRES_PAGE = ROOT_URL + '/NicoBobo/collection/wish/all/all/all/all/all/all/all/all/page-{}'
+DESIRES_PAGE_1 = ROOT_URL + '/NicoBobo/collection/wish/all/all/all/all/all/all/all/all/page-{}'.format(1)
 
 
-def _get_soup(page=None) -> BeautifulSoup:
-    # Get the first page
-    if page is not None:
-        with open(page) as html:
-            soup = BeautifulSoup(html, 'html.parser')
+def _get_soup_from_page(page: str) -> BeautifulSoup:
+    """
+    Get soup from a HTML page.
+
+    :param page: the page to soup
+    :return: the soup with the good parser
+    """
+    return BeautifulSoup(page, 'html.parser')
+
+
+def _get_soup_from_url(url: str) -> BeautifulSoup:
+    """
+    Get the soup from an URL. Will access the web via a Request.
+
+    :param url: the URL to access
+    :return: the soup
+    """
+    req = requests.get(url)
+    if req.ok:
+        soup = _get_soup_from_page(req.text)
     else:
-        req = requests.get(TO_SEE_PAGE.format(1))
-
-        if req.ok:
-            soup = BeautifulSoup(req.text, 'html.parser')
-        else:
-            soup = BeautifulSoup()
+        soup = BeautifulSoup()
     return soup
 
 
-def get_page_count() -> int:
+def _extract_desires_page_count(soup: BeautifulSoup) -> int:
     """
-    Get the number of pages in "Envies".
+    Get the count of pages in "Envies".
+
+    :param soup: the "Envies" page soup where to search
     :return: the count
     """
-    pages = _get_soup().find_all('a', 'eipa-anchor')
+    tags = soup.find_all('a', 'eipa-anchor')
 
-    count = 0
-    for tag in pages:
-        count = max(count, int(tag.attrs['data-sc-pager-page']))
+    def get_page_number_in_tag(tag): return int(tag.attrs['data-sc-pager-page'])
 
-    return count
+    page_number_tag = max(tags, key=get_page_number_in_tag)
+
+    return get_page_number_in_tag(page_number_tag)
 
 
-def get_movie_endpoints() -> list:
+def get_desire_movies_urls() -> list:
     """
     Get all the urls of the movies across all pages.
     :return: a list of urls
     """
+    page_count = _extract_desires_page_count(_get_soup_from_url(DESIRES_PAGE_1)) + 1
     list_of_movies = []
-    for i in range(1, get_page_count() + 1):
-        page = requests.get(TO_SEE_PAGE.format(i))
-        soup = BeautifulSoup(page.text, 'html.parser')
-        list_of_movies.extend(map(lambda x: x['href'], soup.find_all('a', 'elco-anchor')))
+    for i in range(1, page_count):
+        request = requests.get(DESIRES_PAGE.format(i))
+        if request.ok:
+            soup = _get_soup_from_page(request.text)
+            list_of_movies.extend(map(lambda x: ROOT_URL + x['href'], soup.find_all('a', 'elco-anchor')))
 
     return list_of_movies
 
@@ -72,23 +86,54 @@ class MovieItem:
         return {'title': self.title, 'endpoint': self.endpoint, 'resume': self.resume, 'urls': self.providers_urls}
 
 
-def get_movies_and_providers() -> List[MovieItem]:
+Providers = List[Tuple[str, str]]
+TitleAndResume = Tuple[str, str]
+
+
+def _extract_providers(soup: BeautifulSoup) -> Providers:
+    """
+    Get the providers in the soup.
+
+    :param soup: the soup of a movie
+    :return: a list of one or more providers and their logo
+    """
+    providers = soup.find_all('a', 'product-providers__item', 'href')
+    if len(providers):
+        def extract(x):
+            return x['href'], x.find('img', 'product-providers__logo')['src']
+
+        return [url for url in map(extract, providers)]
+    else:
+        return []
+
+
+def _extract_title_and_resume(soup: BeautifulSoup) -> TitleAndResume:
+    """
+    Get and clean title and resume from the soup.
+
+    :param soup: the soup of a movie
+    :return: both title and resume as a text
+    """
+    title = ' '.join(soup.title.text.split())
+    resume = ' '.join(soup.find('p', 'pvi-productDetails-resume').text.split()).replace('Lire la suite', '')
+    return title, resume
+
+
+def get_movies_and_providers() -> zip(TitleAndResume, Providers):
     """
     Fetch all movie pages and return the list of URLs to providers.
-    :return: a list of the following dictionary:
-            {'title': 'The title of the movie',
-             'resume': 'The resume of the movie',
-             'providers': [{'url': 'URL to the movie', 'logo': 'URL to the logo of the provider'}]
-    """
-    endpoints = [endpoint for endpoint in map(lambda x: ROOT_URL + x, get_movie_endpoints())]
-    logging.debug(endpoints)
 
-    items = []
-    for endpoint in endpoints:
-        request = requests.get(endpoint)
+    :return: a zip with Providers and TitleAndResume
+    """
+    providers = []
+    title_and_resumes = []
+    for url in get_desire_movies_urls():
+        request = requests.get(url)
         if request.ok:
-            soup = BeautifulSoup(request.text, 'html.parser')
-            providers = soup.find_all('a', 'product-providers__item', 'href')
-            if len(providers):
-                items.append(MovieItem(endpoint, soup, providers))
-    return items
+            soup = _get_soup_from_page(request.text)
+            prov = _extract_providers(soup)
+            if len(prov):
+                providers.append(prov)
+                title_and_resumes.append(_extract_title_and_resume(soup))
+
+    return zip(title_and_resumes, providers)
