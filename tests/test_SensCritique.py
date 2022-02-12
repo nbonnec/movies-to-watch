@@ -1,11 +1,13 @@
 import source.SensCritique
 import unittest
+import os
 from bs4 import BeautifulSoup
 
 SC = source.SensCritique
 """Type alias."""
 
-RESOURCES_FOLDER = '../resources/html/'
+FILE_PATH = os.path.dirname(__file__)
+RESOURCES_FOLDER = FILE_PATH + '/../resources/html/'
 
 
 def _get_soup_from_file(path: str) -> BeautifulSoup:
@@ -44,7 +46,7 @@ class TestSensCritique(unittest.TestCase):
                          ' Elle décide de les suivre se laissant entraîner par la fête jusqu\'au dérapage.')
 
     def test_extract_tv_release(self) -> None:
-        soup = _get_soup_from_file(RESOURCES_FOLDER + 'victoria.html')
+        soup = _get_soup_from_file(RESOURCES_FOLDER + 'tucker-and-dale.html')
         release = SC._extract_tv_release(soup)
         self.assertEqual(release, None)
 
