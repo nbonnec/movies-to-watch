@@ -1,7 +1,7 @@
 import logging
 from typing import List
 
-from source import SensCritique
+import SensCritique
 from source.Types import Provider
 
 
