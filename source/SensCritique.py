@@ -5,7 +5,7 @@ Functions to access the SensCritique site.
 import requests
 from bs4 import BeautifulSoup
 from typing import List, Optional
-from source.Types import Provider, WorkInfo
+from Types import Provider, WorkInfo
 
 ROOT_URL = 'https://www.senscritique.com'
 DESIRES_PAGE = ROOT_URL + '/NicoBobo/collection/wish/all/all/all/all/all/all/all/all/page-{}'
