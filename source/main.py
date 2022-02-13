@@ -2,7 +2,7 @@ import logging
 from typing import List
 
 import SensCritique
-from source.Types import Provider
+from Types import Provider
 
 
 def build_providers_string(p: List[Provider]) -> str:
