@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from typing import List, Optional
 from Types import Provider, WorkInfo
 
-ROOT_URL = 'https://www.senscritique.com'
+ROOT_URL = 'https://old.senscritique.com'
 DESIRES_PAGE = ROOT_URL + '/NicoBobo/collection/wish/all/all/all/all/all/all/all/all/page-{}'
 DESIRES_PAGE_1 = ROOT_URL + '/NicoBobo/collection/wish/all/all/all/all/all/all/all/all/page-{}'.format(1)
 
