@@ -79,7 +79,7 @@ def _extract_providers(soup: BeautifulSoup) -> Optional[List[Provider]]:
     providers = soup.find_all('a', 'product-providers__item', 'href')
     if len(providers):
         def extract(x) -> Provider:
-            return Provider(x['href'], x.find('img', 'product-providers__logo')['src'])
+            return Provider(x['href'], ROOT_URL + x.find('img', 'product-providers__logo')['src'])
 
         return [url for url in map(extract, providers)]
     else:
