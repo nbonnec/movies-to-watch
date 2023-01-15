@@ -23,12 +23,12 @@ if __name__ == '__main__':
 
     # Print in markdown format
     for work_info, url, providers, tv_release in movies:
-        print('- **[{title}]({endpoint})**'.format(title=work_info.title, endpoint=url), end='')
+        print(f'- **[{work_info.title}]({url})**', end='')
 
         if providers:
-            print(' {}'.format(build_providers_string(providers)), end='')
+            print(f' {build_providers_string(providers)}', end='')
         if tv_release:
-            print(' {}'.format(tv_release), end='')
+            print(f' {tv_release}', end='')
 
         print()
-        print('    - {}'.format(work_info.resume))
+        print(f'    - {work_info.resume}')

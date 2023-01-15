@@ -29,7 +29,7 @@ def _get_soup_from_url(url: str) -> BeautifulSoup:
     :param url: the URL to access
     :return: the soup
     """
-    req = requests.get(url)
+    req = requests.get(url, timeout=10)
     if req.ok:
         soup = _get_soup_from_page(req.text)
     else:
@@ -77,7 +77,7 @@ def _extract_providers(soup: BeautifulSoup) -> Optional[List[Provider]]:
     :return: a list of one or more providers and their logo
     """
     providers = soup.find_all('a', 'product-providers__item', 'href')
-    if len(providers):
+    if providers:
         def extract(x) -> Provider:
             return Provider(x['href'], ROOT_URL + x.find('img', 'product-providers__logo')['src'])
 
@@ -121,7 +121,7 @@ def get_movies_and_providers() -> zip(List[WorkInfo], List[str], List[Provider],
     providers = []
     tv_release = []
     for url in get_desire_movies_urls():
-        request = requests.get(url)
+        request = requests.get(url, timeout=10)
         if request.ok:
             soup = _get_soup_from_page(request.text)
 
