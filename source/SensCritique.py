@@ -9,7 +9,7 @@ from Types import Provider, WorkInfo
 
 ROOT_URL = 'https://old.senscritique.com'
 DESIRES_PAGE = ROOT_URL + '/liste/les_meilleurs_films_coreens/311383'
-DESIRES_PAGE_1 = ROOT_URL + 'https://old.senscritique.com/liste/les_meilleurs_films_coreens/311383#page-{}'.format(1)
+DESIRES_PAGE_1 = ROOT_URL + f'/liste/les_meilleurs_films_coreens/311383#page-{1}'
 
 
 def _get_soup_from_page(page: str) -> BeautifulSoup:
